@@ -7,14 +7,17 @@ This module:
 3. Sends student questions to Ollama (llama3.2) and returns accurate, context-aware answers in a conversational format.
 """
 
+from typing import List, Dict
+
 import json
 import os
 import ollama
 
+
 # Load degree requirements from JSON file
 
 
-def load_knowledge_base():
+def load_knowledge_base() -> Dict[str, object]:
     """
     Load degree requirements and course data from our JSON file.
 
@@ -32,11 +35,21 @@ def load_knowledge_base():
         courses_dir = os.path.join(kb_dir, "courses.json")
         with open(courses_dir, "r") as f:
             courses = json.load(f)
-            print(courses)
     except FileNotFoundError:
         print(f"Error: The file {courses_dir} was not found")
     except json.JSONDecodeError as e:
         print("Invalid JSON syntax:", e)
+
+    try: 
+        degrees_dir = os.path.join(kb_dir, "degrees.json")
+        with open(degrees_dir, "r") as f:
+            degrees = json.load(f)
+    except FileNotFoundError:
+        print(f"Error: The file {degrees_dir} was not found")
+    except json.JSONDecodeError as e:
+        print("Invalid JSON syntax:", e)
+    return {"degrees": degrees, "courses": courses}
+
 
 
 

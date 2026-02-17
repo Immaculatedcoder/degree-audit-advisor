@@ -375,10 +375,10 @@
   },
 
   "common_prerequisite_chains": {
-    "calculus_sequence": ["MATH117 → MATH241 → MATH242 → MATH243"],
-    "proof_track": ["MATH210 + MATH242 → MATH245 → MATH401 or MATH451"],
-    "applied_track": ["MATH242 + MATH349 → MATH302 → MATH535"],
-    "statistics_track": ["MATH243 (coreq) → MATH350 → MATH450"],
-    "cs_sequence": ["CISC106 → CISC210 → CISC220"]
+    "calculus_sequence": ["MATH117 -> MATH241 -> MATH242 -> MATH243"],
+    "proof_track": ["MATH210 + MATH242 -> MATH245 -> MATH401 or MATH451"],
+    "applied_track": ["MATH242 + MATH349 -> MATH302 -> MATH535"],
+    "statistics_track": ["MATH243 (coreq) -> MATH350 -> MATH450"],
+    "cs_sequence": ["CISC106 -> CISC210 -> CISC220"]
   }
 }

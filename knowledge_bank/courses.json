@@ -1,0 +1,522 @@
+{
+  "courses": [
+    {
+      "id": "MATH010",
+      "name": "Intermediate Algebra",
+      "credits": 0,
+      "level": "preparatory",
+      "description": "Preparatory algebra course. Does not count toward degree credits.",
+      "prerequisites": [],
+      "corequisites": [],
+      "offered": [
+        "Fall",
+        "Spring"
+      ]
+    },
+    {
+      "id": "MATH115",
+      "name": "Pre-Calculus",
+      "credits": 4,
+      "level": "100",
+      "description": "Preparation for calculus. Covers functions, trigonometry, and algebraic techniques.",
+      "prerequisites": [],
+      "corequisites": [],
+      "offered": [
+        "Fall",
+        "Spring"
+      ]
+    },
+    {
+      "id": "MATH117",
+      "name": "Pre-Calculus for Scientists and Engineers",
+      "credits": 4,
+      "level": "100",
+      "description": "Accelerated pre-calculus for STEM students. Leads directly into MATH 241.",
+      "prerequisites": [],
+      "corequisites": [],
+      "offered": [
+        "Fall",
+        "Spring"
+      ]
+    },
+    {
+      "id": "MATH205",
+      "name": "Statistical Methods",
+      "credits": 3,
+      "level": "200",
+      "description": "Applied statistics course covering data analysis and inference.",
+      "prerequisites": [],
+      "corequisites": [],
+      "offered": [
+        "Fall",
+        "Spring"
+      ]
+    },
+    {
+      "id": "MATH210",
+      "name": "Discrete Mathematics I",
+      "credits": 3,
+      "level": "200",
+      "description": "Logic, sets, proof techniques, combinatorics, graph theory. Foundational for upper-level math.",
+      "prerequisites": [],
+      "corequisites": [],
+      "offered": [
+        "Fall",
+        "Spring"
+      ],
+      "core_for_bs_math": true
+    },
+    {
+      "id": "MATH221",
+      "name": "Calculus I",
+      "credits": 4,
+      "level": "200",
+      "description": "Single-variable differential calculus. Not the typical starting point for math majors.",
+      "prerequisites": [],
+      "corequisites": [],
+      "offered": [
+        "Fall",
+        "Spring"
+      ]
+    },
+    {
+      "id": "MATH230",
+      "name": "Finite Mathematics with Applications",
+      "credits": 3,
+      "level": "200",
+      "description": "Linear algebra and probability with applications to business and social sciences.",
+      "prerequisites": [],
+      "corequisites": [],
+      "offered": [
+        "Fall",
+        "Spring"
+      ]
+    },
+    {
+      "id": "MATH231",
+      "name": "Integrated Calculus IA",
+      "credits": 4,
+      "level": "200",
+      "description": "First part of a two-semester sequence integrating pre-calculus and Calculus I.",
+      "prerequisites": [],
+      "corequisites": [],
+      "offered": [
+        "Fall"
+      ]
+    },
+    {
+      "id": "MATH232",
+      "name": "Integrated Calculus IB",
+      "credits": 4,
+      "level": "200",
+      "description": "Second part of the integrated calculus sequence. Equivalent to MATH 241.",
+      "prerequisites": [],
+      "corequisites": [],
+      "offered": [
+        "Spring"
+      ]
+    },
+    {
+      "id": "MATH241",
+      "name": "Analytic Geometry and Calculus A",
+      "credits": 4,
+      "level": "200",
+      "description": "Single-variable calculus: limits, derivatives, integrals. Standard entry point for math majors.",
+      "prerequisites": [],
+      "corequisites": [],
+      "offered": [
+        "Fall",
+        "Spring"
+      ]
+    },
+    {
+      "id": "MATH242",
+      "name": "Analytic Geometry and Calculus B",
+      "credits": 4,
+      "level": "200",
+      "description": "Continuation of calculus: techniques of integration, series, parametric equations.",
+      "prerequisites": [],
+      "corequisites": [],
+      "offered": [
+        "Fall",
+        "Spring"
+      ],
+      "core_for_bs_math": true,
+      "honors_section": "Offered every Fall"
+    },
+    {
+      "id": "MATH243",
+      "name": "Analytic Geometry and Calculus C",
+      "credits": 4,
+      "level": "200",
+      "description": "Multivariable calculus: partial derivatives, multiple integrals, vector calculus.",
+      "prerequisites": [],
+      "corequisites": [],
+      "offered": [
+        "Fall",
+        "Spring"
+      ],
+      "core_for_bs_math": true,
+      "honors_section": "Offered every Spring"
+    },
+    {
+      "id": "MATH245",
+      "name": "An Introduction to Proof",
+      "credits": 3,
+      "level": "200",
+      "description": "Bridge course to upper-level math. Proof techniques, set theory, functions. Critical gateway course.",
+      "prerequisites": [],
+      "corequisites": [],
+      "offered": [
+        "Fall",
+        "Spring"
+      ],
+      "core_for_bs_math": true
+    },
+    {
+      "id": "MATH302",
+      "name": "Ordinary Differential Equations",
+      "credits": 3,
+      "level": "300",
+      "description": "First and second order ODEs, systems, Laplace transforms, applications.",
+      "prerequisites": [],
+      "corequisites": [],
+      "offered": [
+        "Fall",
+        "Spring"
+      ],
+      "core_for_bs_math": true
+    },
+    {
+      "id": "MATH305",
+      "name": "Applied Mathematics for the Biological Sciences",
+      "credits": 3,
+      "level": "300",
+      "description": "Mathematical modeling in biology using differential equations and computation.",
+      "prerequisites": [],
+      "corequisites": [],
+      "offered": [
+        "Spring"
+      ]
+    },
+    {
+      "id": "MATH308",
+      "name": "Historical Development of Mathematical Concepts and Ideas",
+      "credits": 3,
+      "level": "300",
+      "description": "History of mathematics. Satisfies CAS second writing requirement. WARNING: Does NOT count as a restricted elective.",
+      "prerequisites": [],
+      "corequisites": [],
+      "offered": [
+        "Spring"
+      ],
+      "satisfies_second_writing": true,
+      "restricted_elective_eligible": false
+    },
+    {
+      "id": "MATH315",
+      "name": "Discrete Mathematics II",
+      "credits": 3,
+      "level": "300",
+      "description": "Advanced combinatorics, graph theory, algorithms. Builds on MATH 210.",
+      "prerequisites": [],
+      "corequisites": [],
+      "offered": [
+        "Spring"
+      ],
+      "math_option": true
+    },
+    {
+      "id": "MATH342",
+      "name": "Applied Mathematics for Chemical and Biomolecular Engineering",
+      "credits": 3,
+      "level": "300",
+      "description": "Applied math techniques for engineering students.",
+      "prerequisites": [],
+      "corequisites": [],
+      "offered": [
+        "Fall",
+        "Spring"
+      ]
+    },
+    {
+      "id": "MATH349",
+      "name": "Elementary Linear Algebra",
+      "credits": 3,
+      "level": "300",
+      "description": "Matrix algebra, vector spaces, eigenvalues, linear transformations. Fundamental for upper-level math.",
+      "prerequisites": [],
+      "corequisites": [],
+      "offered": [
+        "Fall",
+        "Spring"
+      ],
+      "core_for_bs_math": true,
+      "honors_section": "Offered every Fall"
+    },
+    {
+      "id": "MATH350",
+      "name": "Probability Theory and Simulation Methods",
+      "credits": 3,
+      "level": "300",
+      "description": "Probability distributions, random variables, expectation, simulation. Foundation for statistics.",
+      "prerequisites": [],
+      "corequisites": [],
+      "offered": [
+        "Fall",
+        "Spring"
+      ],
+      "core_for_bs_math": true
+    },
+    {
+      "id": "MATH351",
+      "name": "Engineering Mathematics I",
+      "credits": 3,
+      "level": "300",
+      "description": "ODEs and linear algebra for engineers. Parallel to MATH 302 + MATH 349 combined.",
+      "prerequisites": [],
+      "corequisites": [],
+      "offered": [
+        "Fall",
+        "Spring"
+      ]
+    },
+    {
+      "id": "MATH352",
+      "name": "Engineering Mathematics II",
+      "credits": 3,
+      "level": "300",
+      "description": "PDEs, Fourier series, boundary value problems for engineers.",
+      "prerequisites": [],
+      "corequisites": [],
+      "offered": [
+        "Fall",
+        "Spring"
+      ]
+    },
+    {
+      "id": "MATH353",
+      "name": "Engineering Mathematics III",
+      "credits": 3,
+      "level": "300",
+      "description": "Numerical methods and computation for engineers.",
+      "prerequisites": [],
+      "corequisites": [],
+      "offered": [
+        "Fall",
+        "Spring"
+      ]
+    },
+    {
+      "id": "MATH401",
+      "name": "Introduction to Real Analysis",
+      "credits": 3,
+      "level": "400",
+      "description": "Rigorous treatment of limits, continuity, differentiation, integration. Essential for graduate school.",
+      "prerequisites": [],
+      "corequisites": [],
+      "offered": [
+        "Spring"
+      ],
+      "math_option": true
+    },
+    {
+      "id": "MATH426",
+      "name": "Computational Mathematics I",
+      "credits": 3,
+      "level": "400",
+      "description": "Numerical methods: root finding, interpolation, numerical integration, linear systems.",
+      "prerequisites": [],
+      "corequisites": [],
+      "offered": [
+        "Fall",
+        "Spring"
+      ],
+      "math_option": true
+    },
+    {
+      "id": "MATH428",
+      "name": "Computational Mathematics II",
+      "credits": 3,
+      "level": "400",
+      "description": "Advanced numerical methods for ODEs and PDEs.",
+      "prerequisites": [],
+      "corequisites": [],
+      "offered": [
+        "Spring"
+      ]
+    },
+    {
+      "id": "MATH450",
+      "name": "Mathematical Statistics",
+      "credits": 3,
+      "level": "400",
+      "description": "Statistical inference, estimation, hypothesis testing. Builds on MATH 350.",
+      "prerequisites": [],
+      "corequisites": [],
+      "offered": [
+        "Fall",
+        "Spring"
+      ],
+      "math_option": true
+    },
+    {
+      "id": "MATH451",
+      "name": "Abstract Algebra I",
+      "credits": 3,
+      "level": "400",
+      "description": "Groups, rings, fields. Core abstract math course for graduate school preparation.",
+      "prerequisites": [],
+      "corequisites": [],
+      "offered": [
+        "Fall"
+      ],
+      "math_option": true
+    },
+    {
+      "id": "MATH460",
+      "name": "Introduction to Mathematical Biology",
+      "credits": 3,
+      "level": "400",
+      "description": "Mathematical modeling in biology.",
+      "prerequisites": [],
+      "corequisites": [],
+      "offered": [
+        "Fall"
+      ]
+    },
+    {
+      "id": "MATH512",
+      "name": "Contemporary Applications of Mathematics",
+      "credits": 3,
+      "level": "500",
+      "description": "Real-world applications of mathematics. Core course AND satisfies CAS second writing requirement.",
+      "prerequisites": [],
+      "corequisites": [],
+      "offered": [
+        "Fall"
+      ],
+      "core_for_bs_math": true,
+      "satisfies_second_writing": true
+    },
+    {
+      "id": "MATH535",
+      "name": "Introduction to Partial Differential Equations",
+      "credits": 3,
+      "level": "500",
+      "description": "Heat equation, wave equation, Laplace equation, Fourier methods.",
+      "prerequisites": [],
+      "corequisites": [],
+      "offered": [
+        "Spring"
+      ],
+      "math_option": true
+    },
+    {
+      "id": "CISC106",
+      "name": "General Computer Science for Engineers",
+      "credits": 3,
+      "level": "100",
+      "description": "Intro to programming (MATLAB/Python). Required for BS Math.",
+      "prerequisites": [],
+      "corequisites": [],
+      "offered": [
+        "Fall",
+        "Spring"
+      ]
+    },
+    {
+      "id": "CISC210",
+      "name": "Introduction to Systems Programming",
+      "credits": 3,
+      "level": "200",
+      "description": "C programming, memory management, Unix. Required for BS Math.",
+      "prerequisites": [],
+      "corequisites": [],
+      "offered": [
+        "Fall",
+        "Spring"
+      ]
+    },
+    {
+      "id": "CISC220",
+      "name": "Data Structures",
+      "credits": 3,
+      "level": "200",
+      "description": "Lists, trees, graphs, sorting, searching. Required for BS Math.",
+      "prerequisites": [],
+      "corequisites": [],
+      "offered": [
+        "Fall",
+        "Spring"
+      ]
+    },
+    {
+      "id": "ENGL110",
+      "name": "First-Year Writing",
+      "credits": 3,
+      "level": "100",
+      "description": "University-required writing course. Must earn C- or better.",
+      "prerequisites": [],
+      "corequisites": [],
+      "offered": [
+        "Fall",
+        "Spring"
+      ]
+    },
+    {
+      "id": "ENGL312",
+      "name": "Written Communications in Business",
+      "credits": 3,
+      "level": "300",
+      "description": "Business writing. Satisfies CAS second writing requirement.",
+      "prerequisites": [],
+      "corequisites": [],
+      "offered": [
+        "Fall",
+        "Spring"
+      ],
+      "satisfies_second_writing": true
+    },
+    {
+      "id": "ENGL410",
+      "name": "Technical Writing",
+      "credits": 3,
+      "level": "400",
+      "description": "Technical and scientific writing. Satisfies CAS second writing requirement.",
+      "prerequisites": [],
+      "corequisites": [],
+      "offered": [
+        "Fall",
+        "Spring"
+      ],
+      "satisfies_second_writing": true
+    }
+  ],
+  "semester_availability_notes": {
+    "MATH222": "Not offered every Spring",
+    "MATH260": "Requires instructor permission",
+    "honors_sections": [
+      "MATH242 Honors: every Fall",
+      "MATH243 Honors: every Spring",
+      "MATH349 Honors: every Fall"
+    ]
+  },
+  "common_prerequisite_chains": {
+    "calculus_sequence": [
+      "MATH117 -> MATH241 -> MATH242 -> MATH243"
+    ],
+    "proof_track": [
+      "MATH210 + MATH242 -> MATH245 -> MATH401 or MATH451"
+    ],
+    "applied_track": [
+      "MATH242 + MATH349 -> MATH302 -> MATH535"
+    ],
+    "statistics_track": [
+      "MATH243 (coreq) -> MATH350 -> MATH450"
+    ],
+    "cs_sequence": [
+      "CISC106 -> CISC210 -> CISC220"
+    ]
+  }
+}

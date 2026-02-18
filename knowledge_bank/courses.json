@@ -45,7 +45,9 @@
       "credits": 3,
       "level": "200",
       "description": "Applied statistics course covering data analysis and inference.",
-      "prerequisites": [],
+      "prerequisites": [
+        "MATH210 or MATH230"
+      ],
       "corequisites": [],
       "offered": [
         "Fall",
@@ -59,7 +61,9 @@
       "level": "200",
       "description": "Logic, sets, proof techniques, combinatorics, graph theory. Foundational for upper-level math.",
       "prerequisites": [],
-      "corequisites": [],
+      "corequisites": [
+        "MATH232 or MATH241 or MATH242"
+      ],
       "offered": [
         "Fall",
         "Spring"
@@ -72,7 +76,9 @@
       "credits": 4,
       "level": "200",
       "description": "Single-variable differential calculus. Not the typical starting point for math majors.",
-      "prerequisites": [],
+      "prerequisites": [
+        "MATH115 or MATH117"
+      ],
       "corequisites": [],
       "offered": [
         "Fall",
@@ -85,7 +91,9 @@
       "credits": 3,
       "level": "200",
       "description": "Linear algebra and probability with applications to business and social sciences.",
-      "prerequisites": [],
+      "prerequisites": [
+        "MATH221"
+      ],
       "corequisites": [],
       "offered": [
         "Fall",
@@ -98,7 +106,9 @@
       "credits": 4,
       "level": "200",
       "description": "First part of a two-semester sequence integrating pre-calculus and Calculus I.",
-      "prerequisites": [],
+      "prerequisites": [
+        "MATH010 with minimum of C-"
+      ],
       "corequisites": [],
       "offered": [
         "Fall"
@@ -110,7 +120,9 @@
       "credits": 4,
       "level": "200",
       "description": "Second part of the integrated calculus sequence. Equivalent to MATH 241.",
-      "prerequisites": [],
+      "prerequisites": [
+        "MATH231"
+      ],
       "corequisites": [],
       "offered": [
         "Spring"
@@ -122,7 +134,9 @@
       "credits": 4,
       "level": "200",
       "description": "Single-variable calculus: limits, derivatives, integrals. Standard entry point for math majors.",
-      "prerequisites": [],
+      "prerequisites": [
+        "MATH117"
+      ],
       "corequisites": [],
       "offered": [
         "Fall",
@@ -135,7 +149,9 @@
       "credits": 4,
       "level": "200",
       "description": "Continuation of calculus: techniques of integration, series, parametric equations.",
-      "prerequisites": [],
+      "prerequisites": [
+        "MATH241 or MATH232"
+      ],
       "corequisites": [],
       "offered": [
         "Fall",
@@ -150,7 +166,9 @@
       "credits": 4,
       "level": "200",
       "description": "Multivariable calculus: partial derivatives, multiple integrals, vector calculus.",
-      "prerequisites": [],
+      "prerequisites": [
+        "MATH242"
+      ],
       "corequisites": [],
       "offered": [
         "Fall",
@@ -165,7 +183,10 @@
       "credits": 3,
       "level": "200",
       "description": "Bridge course to upper-level math. Proof techniques, set theory, functions. Critical gateway course.",
-      "prerequisites": [],
+      "prerequisites": [
+        "MATH210",
+        "MATH242"
+      ],
       "corequisites": [],
       "offered": [
         "Fall",
@@ -179,7 +200,10 @@
       "credits": 3,
       "level": "300",
       "description": "First and second order ODEs, systems, Laplace transforms, applications.",
-      "prerequisites": [],
+      "prerequisites": [
+        "MATH242",
+        "MATH349"
+      ],
       "corequisites": [],
       "offered": [
         "Fall",
@@ -193,7 +217,10 @@
       "credits": 3,
       "level": "300",
       "description": "Mathematical modeling in biology using differential equations and computation.",
-      "prerequisites": [],
+      "prerequisites": [
+        "MATH242",
+        "CISC106"
+      ],
       "corequisites": [],
       "offered": [
         "Spring"
@@ -205,7 +232,9 @@
       "credits": 3,
       "level": "300",
       "description": "History of mathematics. Satisfies CAS second writing requirement. WARNING: Does NOT count as a restricted elective.",
-      "prerequisites": [],
+      "prerequisites": [
+        "MATH241"
+      ],
       "corequisites": [],
       "offered": [
         "Spring"
@@ -219,7 +248,9 @@
       "credits": 3,
       "level": "300",
       "description": "Advanced combinatorics, graph theory, algorithms. Builds on MATH 210.",
-      "prerequisites": [],
+      "prerequisites": [
+        "MATH210"
+      ],
       "corequisites": [],
       "offered": [
         "Spring"
@@ -232,7 +263,9 @@
       "credits": 3,
       "level": "300",
       "description": "Applied math techniques for engineering students.",
-      "prerequisites": [],
+      "prerequisites": [
+        "MATH351"
+      ],
       "corequisites": [],
       "offered": [
         "Fall",
@@ -245,7 +278,9 @@
       "credits": 3,
       "level": "300",
       "description": "Matrix algebra, vector spaces, eigenvalues, linear transformations. Fundamental for upper-level math.",
-      "prerequisites": [],
+      "prerequisites": [
+        "MATH230 or MATH242"
+      ],
       "corequisites": [],
       "offered": [
         "Fall",
@@ -261,7 +296,9 @@
       "level": "300",
       "description": "Probability distributions, random variables, expectation, simulation. Foundation for statistics.",
       "prerequisites": [],
-      "corequisites": [],
+      "corequisites": [
+        "MATH243"
+      ],
       "offered": [
         "Fall",
         "Spring"
@@ -275,7 +312,9 @@
       "level": "300",
       "description": "ODEs and linear algebra for engineers. Parallel to MATH 302 + MATH 349 combined.",
       "prerequisites": [],
-      "corequisites": [],
+      "corequisites": [
+        "MATH243"
+      ],
       "offered": [
         "Fall",
         "Spring"
@@ -287,7 +326,9 @@
       "credits": 3,
       "level": "300",
       "description": "PDEs, Fourier series, boundary value problems for engineers.",
-      "prerequisites": [],
+      "prerequisites": [
+        "MATH351"
+      ],
       "corequisites": [],
       "offered": [
         "Fall",
@@ -300,7 +341,10 @@
       "credits": 3,
       "level": "300",
       "description": "Numerical methods and computation for engineers.",
-      "prerequisites": [],
+      "prerequisites": [
+        "MATH351",
+        "CISC106"
+      ],
       "corequisites": [],
       "offered": [
         "Fall",
@@ -313,7 +357,9 @@
       "credits": 3,
       "level": "400",
       "description": "Rigorous treatment of limits, continuity, differentiation, integration. Essential for graduate school.",
-      "prerequisites": [],
+      "prerequisites": [
+        "MATH245"
+      ],
       "corequisites": [],
       "offered": [
         "Spring"
@@ -326,7 +372,9 @@
       "credits": 3,
       "level": "400",
       "description": "Numerical methods: root finding, interpolation, numerical integration, linear systems.",
-      "prerequisites": [],
+      "prerequisites": [
+        "MATH305 or MATH349 or MATH351"
+      ],
       "corequisites": [],
       "offered": [
         "Fall",
@@ -340,7 +388,9 @@
       "credits": 3,
       "level": "400",
       "description": "Advanced numerical methods for ODEs and PDEs.",
-      "prerequisites": [],
+      "prerequisites": [
+        "MATH353 or MATH426 or CISC410"
+      ],
       "corequisites": [],
       "offered": [
         "Spring"
@@ -352,7 +402,9 @@
       "credits": 3,
       "level": "400",
       "description": "Statistical inference, estimation, hypothesis testing. Builds on MATH 350.",
-      "prerequisites": [],
+      "prerequisites": [
+        "MATH350 or equivalent"
+      ],
       "corequisites": [],
       "offered": [
         "Fall",
@@ -366,7 +418,10 @@
       "credits": 3,
       "level": "400",
       "description": "Groups, rings, fields. Core abstract math course for graduate school preparation.",
-      "prerequisites": [],
+      "prerequisites": [
+        "MATH245",
+        "MATH349"
+      ],
       "corequisites": [],
       "offered": [
         "Fall"
@@ -379,7 +434,9 @@
       "credits": 3,
       "level": "400",
       "description": "Mathematical modeling in biology.",
-      "prerequisites": [],
+      "prerequisites": [
+        "One of BISC302, BISC305, BISC306, BISC401, or BISC403"
+      ],
       "corequisites": [],
       "offered": [
         "Fall"
@@ -391,7 +448,9 @@
       "credits": 3,
       "level": "500",
       "description": "Real-world applications of mathematics. Core course AND satisfies CAS second writing requirement.",
-      "prerequisites": [],
+      "prerequisites": [
+        "300 or higher level course on differential equations"
+      ],
       "corequisites": [],
       "offered": [
         "Fall"
@@ -405,7 +464,9 @@
       "credits": 3,
       "level": "500",
       "description": "Heat equation, wave equation, Laplace equation, Fourier methods.",
-      "prerequisites": [],
+      "prerequisites": [
+        "MATH302 or MATH305 or MATH342 or MATH352"
+      ],
       "corequisites": [],
       "offered": [
         "Spring"

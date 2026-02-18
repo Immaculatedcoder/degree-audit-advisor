@@ -49,7 +49,7 @@ def fetch_page(url):
 
 def parse_prerequisite_table(soup):
     """
-    We extract each row into a dictionary 
+    Parse the prerequisites table from the UD Math course offerings page.
     """
     prereqs = {}
 
@@ -65,13 +65,23 @@ def parse_prerequisite_table(soup):
                 prerequisite = cells[1].get_text(strip=True)
                 corequisite = cells[2].get_text(strip=True)
 
-                course = re.sub(r'\s+', '',course).upper()
+                # Remove ALL non-ASCII characters (hidden unicode like zero-width spaces)
+                import unicodedata
+                course = ''.join(c for c in course if unicodedata.category(c) != 'Cf')
+                course = re.sub(r'\s+', '', course).upper()
+
+                prerequisite = ''.join(c for c in prerequisite if unicodedata.category(c) != 'Cf')
+                prerequisite = prerequisite.strip()
+
+                corequisite = ''.join(c for c in corequisite if unicodedata.category(c) != 'Cf')
+                corequisite = corequisite.strip()
 
                 if course.startswith("MATH") and len(course) >= 7:
                     prereqs[course] = {
-                        "prerequisites": prerequisite if prerequisite else "None",
+                        "prerequisites": prerequisite if prerequisite and prerequisite.upper() != "NONE" else "None",
                         "corequisites": corequisite if corequisite else "None"
                     }
+
     print(f"Found prerequisite for {len(prereqs)} course(s).")
     return prereqs
 
@@ -230,12 +240,27 @@ def build_courses_json(prereqs, offerings):
             "description" : definition["description"]
         }
 
+        # Merge scraped prerequisites (live from UD website)
         if course_id in prereqs:
             scraped = prereqs[course_id]
             prereq_text = scraped["prerequisites"]
             coreq_text = scraped["corequisites"]
-            course["prerequisites"] = [prereq_text] if prereq_text != "None" else []
-            course["corequisites"] = [coreq_text] if coreq_text != "None" else []
+
+            # Clean non-breaking spaces and split on common separators (& , and)
+            if prereq_text and prereq_text != "None":
+                prereq_text = prereq_text.replace('\xa0', ' ')
+                # Split on & or "and" to get individual courses
+                parts = re.split(r'\s*&\s*|\s+and\s+', prereq_text)
+                course["prerequisites"] = [p.strip() for p in parts if p.strip()]
+            else:
+                course["prerequisites"] = []
+
+            if coreq_text and coreq_text != "None":
+                coreq_text = coreq_text.replace('\xa0', ' ')
+                parts = re.split(r'\s*&\s*|\s+and\s+', coreq_text)
+                course["corequisites"] = [p.strip() for p in parts if p.strip()]
+            else:
+                course["corequisites"] = []
         else:
             course["prerequisites"] = []
             course["corequisites"] = []

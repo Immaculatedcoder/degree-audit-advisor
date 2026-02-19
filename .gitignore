@@ -4,4 +4,4 @@ __pycache__/
 *.pyc
 .streamlit/
 test_engine.py
-knowledge_base/
+knowledge_base

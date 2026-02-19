@@ -3,7 +3,6 @@ import streamlit as st
 from advisor_engine import (
     create_advisor,
     get_advisor_response,
-    get_advisor_response_stream,
     parse_completed_courses,
     extract_text_from_pdf,
 )
@@ -67,7 +66,7 @@ with st.sidebar:
         if st.button(q, key=f"quick_{q}"):
             st.session_state.messages.append({"role": "user", "content": q})
             with st.spinner("Aworawo is thinking..."):
-                response = get_advisor_response_stream(llm, vector_store, system_prompt, st.session_state.messages)
+                response = get_advisor_response(llm, vector_store, system_prompt, st.session_state.messages)
             st.session_state.messages.append({"role": "assistant", "content": response})
             st.rerun()
 

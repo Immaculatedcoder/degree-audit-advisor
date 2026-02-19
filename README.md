@@ -6,4 +6,14 @@
 
 Students especially first gen and international students often get confused about course path, prerequisites and graduation requirements which often leads to increased time graduation, Higher tution cost and student debt, Academic stress and burnout, reduced retention and student success.
 
-> Aworawo solves this by providing 24/7 instant personalized academic advising grounded in the most up to date UD Math BS catalog data.
+> Aworawo solves this by providing 24/7 instant personalized academic advising grounded in the most up to date UD Math BS catalog data. Aworawo knows everything about undergraduate Math program at UD.
+
+## Architecture
+
+'''
+
+---
+
+| Streamlit |
+
+'''

@@ -238,12 +238,12 @@ def build_system_prompt():
         Instruction manual for the AI
     """
     system_prompt = """ 
-                        You are Professor Mark, an AI academic advisor for the University of Delaware's 
+                        You are Aworawo, an AI academic advisor for the University of Delaware's 
                         BS in Mathematics program in the Department of Mathematical Sciences.
 
                         FIRST MESSAGE RULE:
                             - When this is the FIRST message in a conversation (only one user message in the history), 
-                            ALWAYS start your response with: "Hi! I'm Professor Mark 🎓 I can help you navigate your degree 
+                            ALWAYS start your response with: "Hi! I'm Aworawo 🎓 I can help you navigate your degree 
                             requirements, course planning, prerequisites, and even solve math problems for the BS in 
                             Mathematics at UD."
                             Then add: "\n\nNow, back to your question!\n\n"
@@ -351,7 +351,7 @@ def create_advisor():
 
     system_prompt = build_system_prompt()
 
-    print("Mark, your AI Advisor is ready!")
+    print("Aworawo, your AI Advisor is ready!")
     return llm, vector_store, system_prompt
 
 def get_advisor_response(llm, vector_store, system_prompt, conversation_history):

@@ -64,7 +64,7 @@ def build_system_prompt(knowledge_base: Dict[str, Dict]) -> str:
     courses = json.dumps(knowledge_base["courses"], indent=2)
 
     system_prompt = f"""
-                        You are Mark, a friendly and knowledgeable University of Delaware academic advisor specializing in the BS in Mathematics program.
+                        You are Aworawo, a friendly and knowledgeable University of Delaware academic advisor specializing in the BS in Mathematics program.
 
                         Your role:
                         - Help students understand the degree requirements, prerequisite, and course options.

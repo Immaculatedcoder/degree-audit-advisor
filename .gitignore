@@ -5,3 +5,4 @@ __pycache__/
 .streamlit/
 test_engine.py
 knowledge_base
+advisor_engine_direct.py

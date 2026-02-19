@@ -12,10 +12,10 @@ from advisor_engine import (
 # --------------------------------
 
 st.set_page_config(
-    page_title="Professor Mark - UD Math Advisor",
+    page_title="Aworawo - UD Math Advisor",
     page_icon="🎓 ",
     layout="wide",
-    initial_sidebar_state="expanded"
+    initial_sidebar_state="auto"
 )
 
 st.markdown(
@@ -41,7 +41,7 @@ def init_advisor():
     """ Load the advisor engine once and cache it"""
     return create_advisor()
 
-with st.spinner("Professor Mark is getting ready...(this may take a minute in first load)"):
+with st.spinner("Aworawo is getting ready...(this may take a minute in first load)"):
     llm, vector_store, system_prompt = init_advisor()
 
 st.markdown("""
@@ -149,7 +149,7 @@ if not st.session_state.messages:
         st.markdown(
             " Hi! I'm **Aworawo 🐦‍🔥**, I can help you navigate your degree requirements, course planning, prerequisites,"
             " and even solve math problems for the BS in Mathematics at UD. \n\n"
-            "Try asking me something, or click a quick questiob in the sidebar!"
+            "Try asking me something, or click a quick question in the sidebar!"
         )
 
 if prompt := st.chat_input("Ask Aworawo anything..."):

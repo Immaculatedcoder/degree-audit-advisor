@@ -60,9 +60,7 @@ with st.sidebar:
         "What courses do I need for BS Math?",
         "What should I take next semester?",
         "What are the prerequisite for MATH 302?",
-        "Can I graduate in 4 years?",
-        "What are the Math Option courses?",
-        "What are the restricted elective rules?"
+        "Can I graduate in 4 years?"
     ]
 
     for q in quick_questions:

@@ -153,7 +153,7 @@ if not st.session_state.messages:
         )
 
 if prompt := st.chat_input("Ask Aworawo anything..."):
-    with st.chat_message("user", avatar=" 🧑‍🎓 "):
+    with st.chat_message("user", avatar="🧑‍🎓"):
         st.markdown(prompt)
 
     st.session_state.messages.append({"role": "user", "content": prompt})
@@ -166,7 +166,7 @@ if prompt := st.chat_input("Ask Aworawo anything..."):
 
     with st.chat_message("assistant", avatar="🎓"):
         with st.spinner("Aworawo is thinking..."):
-            response(llm, vector_store,system_prompt,st.session_state.messages)
+            response = get_advisor_response(llm, vector_store, system_prompt, st.session_state.messages)
         st.markdown(response)
     st.session_state.messages.append({"role": "assistant", "content": response})
 

@@ -137,7 +137,7 @@ with st.sidebar:
 # Main Chat Interface
 for message in st.session_state.messages:
     if message["role"] == "user":
-        with st.chat_message("user", avatar=" 🧑‍🎓 "):
+        with st.chat_message("user", avatar="🧑‍🎓"):
             st.markdown(message["content"])
     elif message["role"] == "assistant":
         with st.chat_message("assistant", avatar="🎓"):

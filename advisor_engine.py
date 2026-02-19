@@ -361,6 +361,68 @@ def create_advisor():
     print("Aworawo, your AI Advisor is ready!")
     return llm, vector_store, system_prompt
 
+def get_advisor_response_stream(llm, vector_store, system_prompt, conversation_history):
+    """
+    Streams the response word by word
+
+    """
+    try:
+        latest_question = conversation_history[-1]["content"]
+        relevant_docs = vector_store.similarity_search(latest_question, k=10)
+
+        mentioned_courses = re.findall(r'(MATH|CISC|ENGL|PHYS|CHEM|BISC|GEOL)\s*(\d{3})', latest_question.upper())
+        course_codes = [f"{dept}{num}" for dept, num in mentioned_courses]
+
+       
+        all_docs = vector_store.similarity_search("course prerequisites offered", k=50)
+
+        keyword_docs = []
+        for doc in all_docs:
+            for code in course_codes:
+                if code in doc.page_content.upper().replace(" ", ""):
+                    keyword_docs.append(doc)
+                    break
+        seen_content = set()
+        combined_docs = []
+        for doc in keyword_docs + relevant_docs:
+            if doc.page_content not in seen_content:
+                seen_content.add(doc.page_content)
+                combined_docs.append(doc)
+        combined_docs = combined_docs[:15]
+
+        context = "\n\n".join([doc.page_content for doc in combined_docs])
+
+        messages = []
+
+        # First: system prompt
+        messages.append(SystemMessage(content=system_prompt))
+
+        for msg in conversation_history[:-1]:
+            if msg["role"] == "user":
+                messages.append(HumanMessage(content=msg["content"]))
+            elif msg["role"] == "assistant":
+                messages.append(AIMessage(content=msg["content"]))
+            
+        augmented_question = f"""CONTEXT (from the official UD 2025-2026 Catalog):
+                                {context}
+
+                                STUDENT'S QUESTION:
+                                {latest_question}
+
+                                Use the CONTEXT above to answer the student's question accurately. 
+                                If the context doesn't fully answer the question, say so and recommend they check with their advisor.
+                            """
+        messages.append(HumanMessage(content=augmented_question))
+
+        for chunk in llm.stream(messages):
+            if chunk.content:
+                yield chunk.content
+    except Exception as e:
+        yield f"I'm having trouble right now, make sure Ollama is running with 'Ollama serve'. Error: {str(e)}"
+
+
+
+
 def get_advisor_response(llm, vector_store, system_prompt, conversation_history):
     """
         The core RAG function - search for relevant data, then ask the AI
@@ -378,17 +440,12 @@ def get_advisor_response(llm, vector_store, system_prompt, conversation_history)
     try:
         latest_question = conversation_history[-1]["content"]
 
-        # Step 2: Search the vector database for relevant context
-        # Use HYBRID search: vector similarity + keyword matching
         relevant_docs = vector_store.similarity_search(latest_question, k=10)
 
-        # Also do a keyword search — find any chunks that mention
-        # specific course codes from the question (e.g., MATH302)
-        import re
         mentioned_courses = re.findall(r'(MATH|CISC|ENGL|PHYS|CHEM|BISC|GEOL)\s*(\d{3})', latest_question.upper())
         course_codes = [f"{dept}{num}" for dept, num in mentioned_courses]
 
-        # Get ALL documents from the vector store for keyword matching
+       
         all_docs = vector_store.similarity_search("course prerequisites offered", k=50)
 
         # Find chunks that mention the specific courses
